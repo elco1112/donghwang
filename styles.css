@@ -1255,6 +1255,9 @@ p {
     position: relative;
     transform: scale(0.9) translateY(20px);
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-overlay.open .modal-card {
@@ -1282,7 +1285,7 @@ p {
     display: grid;
     grid-template-columns: 4.5fr 5.5fr;
     height: 100%;
-    max-height: 80vh;
+    min-height: 0;
 }
 
 .modal-visual {
@@ -1891,9 +1894,18 @@ p {
         gap: 0;
     }
     
+    .modal-card {
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
     .modal-content-grid {
         grid-template-columns: 1fr;
-        max-height: 90vh;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        max-height: 100%;
+        min-height: 0;
     }
     
     .modal-visual {
@@ -1909,6 +1921,8 @@ p {
     
     .modal-text-pane {
         padding: 24px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .modal-title {

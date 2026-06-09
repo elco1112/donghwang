@@ -53,6 +53,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px; /* 1rem = 16px (Web Standard Root Size) */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -61,6 +63,13 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+}
+
+#content-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 a {
@@ -1799,8 +1808,39 @@ p {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 15px !important;
+    }
+
     .header .logo-text-wrap {
         display: none;
+    }
+
+    /* Subtler translations on mobile to prevent overflow leaks */
+    .reveal-left {
+        transform: translateX(-15px);
+    }
+    .reveal-right {
+        transform: translateX(15px);
+    }
+
+    /* Mobile Paragraph & Description Typography Optimization */
+    p, .story-text p, .branch-desc, .hgd-body, .service-card p, .benefit-item,
+    .form-group label, .form-group input, .form-group select, .form-group textarea,
+    .modal-detail-block p {
+        font-size: 0.9375rem; /* ~14px (More balanced for mobile screens) */
+    }
+
+    .section-title, .subpage-title {
+        font-size: 1.875rem !important; /* ~28px */
+    }
+
+    .section-subtitle {
+        font-size: 0.8125rem !important; /* ~12px */
+    }
+
+    .footer-logo-text {
+        font-size: 1.25rem !important; /* ~19px */
     }
 
     .section {
@@ -2095,6 +2135,7 @@ p {
     background-position: center;
     z-index: 0;
     will-change: transform;
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .subpage-hero {
@@ -2113,6 +2154,7 @@ p {
     background-position: center;
     z-index: 0;
     will-change: transform;
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .subpage-hero::before {

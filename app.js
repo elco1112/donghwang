@@ -1380,9 +1380,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const heroContent = mainHero.querySelector(".hero-content");
             if (heroContent) {
                 const opacityVal = Math.max(0, 1 - scrollY / 650);
-                const contentTranslate = scrollY * 0.2;
                 heroContent.style.opacity = opacityVal;
-                heroContent.style.transform = `translate3d(0, ${contentTranslate}px, 0)`;
             }
         }
 
@@ -1395,9 +1393,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const subHeroContent = subHero.querySelector(".subpage-hero-content");
             if (subHeroContent) {
                 const opacityVal = Math.max(0, 1 - scrollY / 320);
-                const contentTranslate = scrollY * 0.15;
                 subHeroContent.style.opacity = opacityVal;
-                subHeroContent.style.transform = `translate3d(0, ${contentTranslate}px, 0)`;
             }
         }
 

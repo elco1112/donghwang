@@ -89,13 +89,13 @@ img {
 }
 
 /* Typography */
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--color-primary-dark);
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--color-primary-dark);
@@ -992,7 +992,7 @@ p {
     font-size: 1.25rem; /* 16px */
     margin-bottom: 12px;
     font-family: var(--font-body);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .service-card p {

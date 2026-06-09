@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑매장 안내 | (주)동황토산</title>
+    <meta name="description" content="주식회사 동황토산의 오프라인 면세 쇼핑 매장 안내. 즉시 면세 환급 및 다국어 지원이 제공되는 부산 지점, 제주 지점 소개.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header id="main-header" class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <img src="assets/logo.png" alt="Dong Hwang To San Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-text-ko" data-i18n="logo_name">주식회사 동황토산</span>
+                    <span class="logo-subtext" data-i18n="logo_sub">DONG HWANG TO SAN</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="ceo.html" data-i18n="nav_story">CEO 인사말</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">회사소개</a></li>
+                    <li><a href="outlets.html" class="active" data-i18n="nav_branches">쇼핑매장</a></li>
+                    <li><a href="products.html" data-i18n="nav_products">제품소개</a></li>
+                    <li><a href="efficacy.html" data-i18n="nav_efficacy">인삼효능</a></li>
+                    <li><a href="partnership.html" data-i18n="nav_partnership">제휴혜택</a></li>
+                    <li><a href="directions.html" data-i18n="nav_booking">오시는길</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-selector" id="lang-selector">
+                    <button class="lang-btn" data-lang="ko">KO</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">ZH</button>
+                    <button class="lang-btn" data-lang="ja">JA</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero">
+        <div class="subpage-hero-content">
+            <h1 class="subpage-title" data-i18n="outlets_page_title">쇼핑매장 안내</h1>
+            <span class="subpage-subtitle" data-i18n="outlets_intro_subtitle">OUR WORLD-CLASS OUTLETS</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="content-wrapper">
+        <!-- Branches Intro -->
+        <section class="section">
+            <div class="container">
+                <p class="outlets-intro-text" data-i18n="outlets_intro">
+                    동황토산의 직영 쇼핑 매장은 최고의 접근성과 쾌적한 쇼핑 환경을 제공하며, 외국인 관광객 맞춤 어드바이저 시스템을 갖추고 있습니다.
+                </p>
+
+                <!-- Branches Cards Grid (reusing styles.css branch cards layout) -->
+                <div class="branches-grid grid-2-col-center">
+                    <!-- Busan Branch -->
+                    <div class="branch-card" id="branch-busan">
+                        <div class="branch-img-placeholder busan-bg">
+                            <div class="branch-overlay">
+                                <span class="branch-tag" data-i18n="branch_store">직영 지점</span>
+                            </div>
+                        </div>
+                        <div class="branch-details">
+                            <h3 class="branch-name" data-i18n="branch_busan_name">부산 지점</h3>
+                            <p class="branch-desc" data-i18n="branch_busan_desc">부산 크루즈 항구 및 국제공항과 인접하여 남해안을 방문하는 외국인 고객을 위한 최상의 서비스를 제공합니다.</p>
+                            <ul class="branch-info-list">
+                                <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="branch_busan_addr">부산광역시 중구 중앙대로 45</span></li>
+                                <li><i class="fa-solid fa-phone"></i> <span>+82-51-460-5678</span></li>
+                                <li><i class="fa-solid fa-clock"></i> <span data-i18n="branch_busan_time">09:00 - 20:00 (연중무휴)</span></li>
+                                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="branch_busan_spec">즉시 면세 환급, 시음 서비스, 영어/중국어/일어 통역</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Jeju Branch -->
+                    <div class="branch-card" id="branch-jeju">
+                        <div class="branch-img-placeholder jeju-bg">
+                            <div class="branch-overlay">
+                                <span class="branch-tag" data-i18n="branch_store">직영 지점</span>
+                            </div>
+                        </div>
+                        <div class="branch-details">
+                            <h3 class="branch-name" data-i18n="branch_jeju_name">제주 지점</h3>
+                            <p class="branch-desc" data-i18n="branch_jeju_desc">천혜의 섬 제주를 찾으시는 전 세계 휴양객들을 위해 공항 인근에 위치하며 고품격 선물 패키지를 다양하게 구비하고 있습니다.</p>
+                            <ul class="branch-info-list">
+                                <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="branch_jeju_addr">제주특별자치도 제주시 노연로 88</span></li>
+                                <li><i class="fa-solid fa-phone"></i> <span>+82-64-740-9876</span></li>
+                                <li><i class="fa-solid fa-clock"></i> <span data-i18n="branch_jeju_time">09:00 - 21:00 (연중무휴)</span></li>
+                                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="branch_jeju_spec">공항 무료 셔틀, 글로벌 카드 환영, 호텔 직송 서비스</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tourist Shopping Guide -->
+        <section class="outlets-guide">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle" data-i18n="services_subtitle">TOURIST SERVICES</span>
+                    <h3 data-i18n="outlets_guide_title" style="font-size: 28px;">외국인 고객 특별 쇼핑 가이드</h3>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="outlets-guide-grid">
+                    <div class="outlets-guide-card">
+                        <h4 data-i18n="outlets_step1_t">1. 웰컴 티 & 무료 시음</h4>
+                        <p data-i18n="outlets_step1_d">매장 방문 시 피로 회복에 탁월한 프리미엄 홍삼 추출액과 호간단을 무료로 시음해 보실 수 있습니다.</p>
+                    </div>
+                    
+                    <div class="outlets-guide-card">
+                        <h4 data-i18n="outlets_step2_t">2. 맞춤형 면세 혜택</h4>
+                        <p data-i18n="outlets_step2_d">여권을 제시하시면 매장 즉시 면세 적용 또는 공항에서 빠르게 세금을 환급받을 수 있는 전용 영수증을 발행해 드립니다.</p>
+                    </div>
+                    
+                    <div class="outlets-guide-card">
+                        <h4 data-i18n="outlets_step3_t">3. 국제 직배송 및 검역 보증</h4>
+                        <p data-i18n="outlets_step3_d">가정이나 호텔로 안전하게 배송해 드리며, 거주 국가 세관 반입에 문제가 없도록 검역 인증 스티커 및 패키지를 포장해 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="assets/logo.png" alt="Dong Hwang To San Logo" class="logo-img" style="height: 40px; width: 40px;">
+                        <span class="footer-logo-text" data-i18n="logo_name">주식회사 동황토산</span>
+                    </div>
+                    <p class="footer-desc" data-i18n="foot_desc">
+                        대한민국 전통 고려인삼의 자부심을 계승하며, 전 세계 관광객들께 자연의 생명력과 웰빙 솔루션을 전달합니다.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-weibo"></i></a>
+                        <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="foot_title_links">빠른 링크</h4>
+                    <ul>
+                        <li><a href="ceo.html" data-i18n="nav_story">CEO 인사말</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">회사소개</a></li>
+                        <li><a href="outlets.html" data-i18n="nav_branches">쇼핑매장</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">제품소개</a></li>
+                        <li><a href="efficacy.html" data-i18n="nav_efficacy">인삼효능</a></li>
+                        <li><a href="partnership.html" data-i18n="nav_partnership">제휴혜택</a></li>
+                        <li><a href="directions.html" data-i18n="nav_booking">오시는길</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="foot_title_addr">본사 정보 (HQ Info)</h4>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_comp">상호명:</strong> <span data-i18n="logo_name">주식회사 동황토산</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_ceo">대표자:</strong> <span data-i18n="foot_ceo">홍길동</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_hq">본점:</strong> <span data-i18n="branch_goyang_addr">경기도 고양시 일산동구 중앙로 123</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_reg">등록번호:</strong> 120-81-00000</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ElcoStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+</body>
+</html>

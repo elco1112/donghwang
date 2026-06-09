@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품소개 | (주)동황토산</title>
+    <meta name="description" content="주식회사 동황토산의 최고 등급 홍삼정, 천삼 건삼, 꿀벌 홍삼절편 및 자회사 호간단 등 고품격 건강 관리 제품 카탈로그.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header id="main-header" class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <img src="assets/logo.png" alt="Dong Hwang To San Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-text-ko" data-i18n="logo_name">주식회사 동황토산</span>
+                    <span class="logo-subtext" data-i18n="logo_sub">DONG HWANG TO SAN</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="ceo.html" data-i18n="nav_story">CEO 인사말</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">회사소개</a></li>
+                    <li><a href="outlets.html" data-i18n="nav_branches">쇼핑매장</a></li>
+                    <li><a href="products.html" class="active" data-i18n="nav_products">제품소개</a></li>
+                    <li><a href="efficacy.html" data-i18n="nav_efficacy">인삼효능</a></li>
+                    <li><a href="partnership.html" data-i18n="nav_partnership">제휴혜택</a></li>
+                    <li><a href="directions.html" data-i18n="nav_booking">오시는길</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-selector" id="lang-selector">
+                    <button class="lang-btn" data-lang="ko">KO</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">ZH</button>
+                    <button class="lang-btn" data-lang="ja">JA</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero">
+        <div class="subpage-hero-content">
+            <h1 class="subpage-title" data-i18n="nav_products">제품소개</h1>
+            <span class="subpage-subtitle" data-i18n="products_subtitle">OUR PRODUCTS</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-product-id="extract">
+                        <div class="product-img-wrap">
+                            <img src="assets/extract.png" alt="Premium Red Ginseng Extract" class="product-img">
+                            <div class="product-hover-overlay">
+                                <button class="btn btn-view-detail" data-i18n="prod_view_detail">상세 정보 보기</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-i18n="prod_cat_extract">고농축 홍삼정</span>
+                            <h3 class="product-title" data-i18n="prod_title_extract">동황토산 6년근 황토홍삼정</h3>
+                            <p class="product-price" data-currency-krw="220,000" data-currency-usd="165" data-currency-cny="1,180" data-currency-jpy="25,000">
+                                ₩220,000
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-product-id="roots">
+                        <div class="product-img-wrap">
+                            <img src="assets/roots.png" alt="Heaven-Grade Dried Roots" class="product-img">
+                            <div class="product-hover-overlay">
+                                <button class="btn btn-view-detail" data-i18n="prod_view_detail">상세 정보 보기</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-i18n="prod_cat_roots">명품 뿌리삼</span>
+                            <h3 class="product-title" data-i18n="prod_title_roots">천삼 등급 황토 건삼 (목함)</h3>
+                            <p class="product-price" data-currency-krw="450,000" data-currency-usd="335" data-currency-cny="2,420" data-currency-jpy="51,000">
+                                ₩450,000
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-product-id="slices">
+                        <div class="product-img-wrap">
+                            <img src="assets/roots.png" alt="Honeyed Ginseng Slices" class="product-img" style="filter: hue-rotate(15deg);">
+                            <div class="product-hover-overlay">
+                                <button class="btn btn-view-detail" data-i18n="prod_view_detail">상세 정보 보기</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-i18n="prod_cat_slices">간편 웰빙식품</span>
+                            <h3 class="product-title" data-i18n="prod_title_slices">동황토산 꿀벌 홍삼절편</h3>
+                            <p class="product-price" data-currency-krw="85,000" data-currency-usd="64" data-currency-cny="460" data-currency-jpy="9,600">
+                                ₩85,000
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Spotlight for Subsidiary -->
+                <div style="margin-top: 100px; border-top: 1px solid rgba(197, 160, 89, 0.2); padding-top: 80px;">
+                    <div class="products-grid grid-1-col-center">
+                        <div class="product-card" data-product-id="extract" style="cursor: default; border-color: rgba(22, 51, 33, 0.2);">
+                            <!-- Custom styling card for Ho Gan Dan -->
+                            <div class="grid-2-col hgd-spotlight-grid">
+                                <div style="background-color: var(--color-hgd-primary); padding: 40px; display: flex; align-items: center; justify-content: center;">
+                                    <img src="assets/hogandan.png" alt="Ho Gan Dan" style="max-height: 220px; object-fit: contain;">
+                                </div>
+                                <div style="padding: 40px;">
+                                    <span class="product-category" style="color: var(--color-accent-dark); font-weight: bold; font-size: 14px;" data-i18n="hgd_badge">호간단 (護肝丹)</span>
+                                    <h3 style="font-size: 22px; margin-top: 8px; margin-bottom: 16px; color: var(--color-primary-dark);" data-i18n="hgd_price_lbl">호간단 프리미엄 (120캡슐)</h3>
+                                    <p style="font-size: 16px; color: var(--color-text-light); margin-bottom: 24px;" data-i18n="hgd_intro">여행의 피로와 현대인의 불규칙한 생활로 지친 간을 보호하는 최적의 처방.</p>
+                                    <p style="font-size: 18px; font-weight: 700; color: var(--color-primary); font-family: var(--font-heading); margin-bottom: 24px;" data-currency-krw="180,000" data-currency-usd="135" data-currency-cny="970" data-currency-jpy="20,500">₩180,000</p>
+                                    <a href="directions.html#booking" class="btn btn-primary" style="font-size: 15px; padding: 10px 20px;" data-i18n="hgd_cta">호간단 예약/구매 문의</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="assets/logo.png" alt="Dong Hwang To San Logo" class="logo-img" style="height: 40px; width: 40px;">
+                        <span class="footer-logo-text" data-i18n="logo_name">주식회사 동황토산</span>
+                    </div>
+                    <p class="footer-desc" data-i18n="foot_desc">
+                        대한민국 전통 고려인삼의 자부심을 계승하며, 전 세계 관광객들께 자연의 생명력과 웰빙 솔루션을 전달합니다.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-weibo"></i></a>
+                        <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="foot_title_links">빠른 링크</h4>
+                    <ul>
+                        <li><a href="ceo.html" data-i18n="nav_story">CEO 인사말</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">회사소개</a></li>
+                        <li><a href="outlets.html" data-i18n="nav_branches">쇼핑매장</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">제품소개</a></li>
+                        <li><a href="efficacy.html" data-i18n="nav_efficacy">인삼효능</a></li>
+                        <li><a href="partnership.html" data-i18n="nav_partnership">제휴혜택</a></li>
+                        <li><a href="directions.html" data-i18n="nav_booking">오시는길</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="foot_title_addr">본사 정보 (HQ Info)</h4>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_comp">상호명:</strong> <span data-i18n="logo_name">주식회사 동황토산</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_ceo">대표자:</strong> <span data-i18n="foot_ceo">홍길동</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_hq">본점:</strong> <span data-i18n="branch_goyang_addr">경기도 고양시 일산동구 중앙로 123</span></p>
+                    <p class="foot-info-p"><strong data-i18n="foot_lbl_reg">등록번호:</strong> 120-81-00000</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ElcoStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal Overlay -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close" aria-label="Close details">&times;</button>
+            <div class="modal-content-grid">
+                <div class="modal-visual">
+                    <img src="" alt="Product Image" id="modal-product-img" class="modal-img">
+                </div>
+                <div class="modal-text-pane">
+                    <span class="modal-category" id="modal-product-category">카테고리</span>
+                    <h3 class="modal-title" id="modal-product-title">제품명</h3>
+                    <p class="modal-price" id="modal-product-price">₩0</p>
+                    
+                    <div class="modal-scroll-area">
+                        <div class="modal-detail-block">
+                            <h4 data-i18n="modal_lbl_desc">제품 특징 (Key Features)</h4>
+                            <p id="modal-product-desc">특징 설명</p>
+                        </div>
+                        <div class="modal-detail-block">
+                            <h4 data-i18n="modal_lbl_ingredients">성분 정보 (Ingredients)</h4>
+                            <p id="modal-product-ingredients">성분 정보</p>
+                        </div>
+                        <div class="modal-detail-block">
+                            <h4 data-i18n="modal_lbl_how_to_use">섭취 및 보관 방법 (Directions)</h4>
+                            <p id="modal-product-usage">설명</p>
+                        </div>
+                        <div class="modal-detail-block block-highlight">
+                            <h4 data-i18n="modal_lbl_customs"><i class="fa-solid fa-circle-exclamation"></i> 여행객 통관 유의사항 (Customs Notice)</h4>
+                            <p id="modal-product-customs">국가별 반입 규정 안내</p>
+                        </div>
+                    </div>
+                    
+                    <a href="directions.html#booking" class="btn btn-primary btn-modal-booking" id="modal-booking-btn" data-i18n="modal_btn_book">이 제품 구매 예약하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+</body>
+</html>

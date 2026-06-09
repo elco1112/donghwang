@@ -71,7 +71,7 @@ const translations = {
         // Ho Gan Dan Subsidiary
         hgd_badge: "호간단 (護肝丹)",
         hgd_subtitle: "DONG HWANG TO SAN SUBSIDIARY",
-        hgd_title: "자회사 브랜드: 호간단 (護肝丹)",
+        hgd_title: "호간단 (護肝丹)",
         hgd_intro: "여행의 피로와 현대인의 불규칙한 생활로 지친 간을 보호하는 최적의 처방.",
         hgd_body: "동황토산의 전문 약초 배합 기술을 바탕으로 출범한 자회사 브랜드 '호간단'은 한국의 전통 약용 식물인 헛개나무 열매 고농축 추출물과 엄선된 6년근 홍삼을 결합하여 완성되었습니다. 잦은 음주, 누적된 피로, 시차 적응으로 몸이 무거우신 해외 여행객들께 활력 넘치는 하루를 되찾아 드립니다.",
         hgd_f1_t: "간 세포 보호 및 해독",
@@ -131,7 +131,7 @@ const translations = {
         // Efficacy Page (efficacy.html) - [NEW]
         eff_page_title: "황토인삼 효능",
         eff_subtitle: "HEALTH BENEFITS OF HWANGTO GINSENG",
-        eff_title: "동황토산 인삼의 5대 대표 효능",
+        eff_title: "인삼의 5대 대표 효능",
         eff_desc: "비옥한 황토 토양 속에서 게르마늄과 고농축 천연 에너지를 가득 머금고 자란 동황토산 인삼이 선사하는 과학적인 신체 건강 개선 효과입니다.",
         eff_card1_title: "면역력 증진 및 예방",
         eff_card1_desc: "세균이나 바이러스로부터 우리 몸을 지켜주는 활성 대식세포와 T-세포 생성을 촉진하여 원초적인 면역 체계를 강력하게 구축해 줍니다.",
@@ -200,7 +200,6 @@ const translations = {
         foot_lbl_hq: "본점:",
         foot_lbl_reg: "등록번호:",
         foot_ceo: "홍길동",
-        foot_copy_extra: "자회사 주식회사 호간단",
 
         // Modals & Messages
         modal_lbl_desc: "제품 특징 (Key Features)",

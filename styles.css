@@ -5,8 +5,8 @@
 /* Custom CSS Variables / Design Tokens */
 :root {
     /* Fonts */
-    --font-heading: 'Cinzel', serif;
-    --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+    --font-heading: 'Noto Sans KR';
+    --font-body: 'Noto Sans KR';
     
     /* Colors - Dong Hwang To San */
     --color-primary: #800A1D;       /* Premium Red Ginseng Crimson */
@@ -298,7 +298,7 @@ p {
 
 .nav-menu a {
     font-size: 1rem; /* 16px */
-    font-weight: bold;
+    font-weight: 500;
     color: var(--color-text-light);
     position: relative;
     padding: 6px 0;
@@ -360,7 +360,7 @@ p {
     border: none;
     padding: 6px 12px;
     font-size: 1rem; /* 16px */
-    font-weight: bold;
+    font-weight: 500;
     color: var(--color-text-light);
     cursor: pointer;
     transition: var(--transition);

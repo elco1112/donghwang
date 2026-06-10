@@ -38,15 +38,28 @@
                     <li><a href="efficacy.html" data-i18n="nav_efficacy">인삼효능</a></li>
                     <li><a href="partnership.html" class="active" data-i18n="nav_partnership">제휴혜택</a></li>
                     <li><a href="directions.html" data-i18n="nav_booking">오시는길</a></li>
+                    <li><a href="hogandan/index.html" class="nav-brand-link" data-i18n="nav_hogandan"><i class="fa-solid fa-leaf"></i> 호간단 브랜드몰</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <div class="lang-selector" id="lang-selector">
-                    <button class="lang-btn" data-lang="ko">KO</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="zh">ZH</button>
-                    <button class="lang-btn" data-lang="ja">JA</button>
+                <div class="lang-dropdown-wrap" id="lang-dropdown-wrap">
+                    <button class="lang-dropdown-trigger" id="lang-trigger" aria-label="Select Language">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="lang-trigger-text" id="lang-trigger-text">KOR</span>
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                    </button>
+                    <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+                        <button class="close-dropdown-btn" id="close-lang-dropdown" aria-label="Close menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <ul>
+                            <li><button class="lang-select-btn active" data-lang="ko"><i class="fa-solid fa-check check-icon"></i> Korea</button></li>
+                            <li><button class="lang-select-btn" data-lang="en"><i class="fa-solid fa-check check-icon"></i> English</button></li>
+                            <li><button class="lang-select-btn" data-lang="ja"><i class="fa-solid fa-check check-icon"></i> Japanese</button></li>
+                            <li><button class="lang-select-btn" data-lang="zh"><i class="fa-solid fa-check check-icon"></i> Chinese</button></li>
+                        </ul>
+                    </div>
                 </div>
                 <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
                     <i class="fa-solid fa-bars"></i>

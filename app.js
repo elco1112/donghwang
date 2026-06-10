@@ -15,6 +15,7 @@ const translations = {
         nav_efficacy: "인삼효능",
         nav_partnership: "제휴혜택",
         nav_booking: "오시는길",
+        nav_hogandan: "<i class='fa-solid fa-leaf'></i> 호간단 브랜드몰",
 
         // Hero Section (index.html)
         hero_badge: "KOREAN PREMIUM RED GINSENG",
@@ -222,6 +223,7 @@ const translations = {
         nav_efficacy: "Benefits",
         nav_partnership: "VIP Benefits",
         nav_booking: "Directions",
+        nav_hogandan: "<i class='fa-solid fa-leaf'></i> Ho Gan Dan Shop",
 
         hero_badge: "KOREAN PREMIUM RED GINSENG",
         hero_title: "Elixir of Life Cultivated<br>by the Power of Hwangto Soil",
@@ -423,6 +425,7 @@ const translations = {
         nav_efficacy: "健康功效",
         nav_partnership: "合作特惠",
         nav_booking: "交通指南",
+        nav_hogandan: "<i class='fa-solid fa-leaf'></i> 护肝丹商城",
 
         hero_badge: "KOREAN PREMIUM RED GINSENG",
         hero_title: "汲取黄土之灵气<br>孕育生命之仙草——高丽参",
@@ -624,6 +627,7 @@ const translations = {
         nav_efficacy: "健康効能",
         nav_partnership: "提携特典",
         nav_booking: "アクセス",
+        nav_hogandan: "<i class='fa-solid fa-leaf'></i> ホガンダンショップ",
 
         hero_badge: "KOREAN PREMIUM RED GINSENG",
         hero_title: "黄土의 기운으로 키워낸<br>생명의 영약, 고려인삼",
@@ -932,7 +936,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentLang = localStorage.getItem("preferred_language") || "ko";
 
     const contentWrapper = document.getElementById("content-wrapper");
-    const langBtns = document.querySelectorAll(".lang-btn");
+    const langBtns = document.querySelectorAll(".lang-select-btn");
+    const langTrigger = document.getElementById("lang-trigger");
+    const langTriggerText = document.getElementById("lang-trigger-text");
+    const langDropdownWrap = document.getElementById("lang-dropdown-wrap");
+    const langDropdownMenu = document.getElementById("lang-dropdown-menu");
+    const closeLangDropdown = document.getElementById("close-lang-dropdown");
     const header = document.getElementById("main-header");
     const mobileToggle = document.getElementById("mobile-toggle");
     const navMenu = document.getElementById("nav-menu");
@@ -956,7 +965,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const toastTitle = document.getElementById("toast-title");
     const toastMessage = document.getElementById("toast-message");
 
-    // Initialize Active Language Button State
+    const triggerTextMap = {
+        ko: "KOR",
+        en: "ENG",
+        ja: "JPN",
+        zh: "CHI"
+    };
+
+    // Initialize Active Language Button State & Trigger Text
+    if (langTriggerText) {
+        langTriggerText.textContent = triggerTextMap[currentLang] || "KOR";
+    }
     langBtns.forEach(btn => {
         if (btn.getAttribute("data-lang") === currentLang) {
             btn.classList.add("active");
@@ -1039,11 +1058,51 @@ document.addEventListener("DOMContentLoaded", () => {
     // Bind language selector buttons
     langBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-            langBtns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
             const selectedLang = btn.getAttribute("data-lang");
+            langBtns.forEach(b => {
+                if (b.getAttribute("data-lang") === selectedLang) {
+                    b.classList.add("active");
+                } else {
+                    b.classList.remove("active");
+                }
+            });
+            if (langTriggerText) {
+                langTriggerText.textContent = triggerTextMap[selectedLang] || "KOR";
+            }
             updateLanguage(selectedLang, true);
+            // Close dropdown
+            if (langDropdownMenu && langDropdownWrap) {
+                langDropdownMenu.classList.remove("show");
+                langDropdownWrap.classList.remove("open");
+            }
         });
+    });
+
+    // Language Dropdown Event Handlers
+    if (langTrigger && langDropdownMenu && langDropdownWrap) {
+        langTrigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            langDropdownMenu.classList.toggle("show");
+            langDropdownWrap.classList.toggle("open");
+        });
+    }
+
+    if (closeLangDropdown && langDropdownMenu && langDropdownWrap) {
+        closeLangDropdown.addEventListener("click", (e) => {
+            e.stopPropagation();
+            langDropdownMenu.classList.remove("show");
+            langDropdownWrap.classList.remove("open");
+        });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+        if (langDropdownMenu && langDropdownWrap && langDropdownMenu.classList.contains("show")) {
+            if (!langDropdownWrap.contains(e.target)) {
+                langDropdownMenu.classList.remove("show");
+                langDropdownWrap.classList.remove("open");
+            }
+        }
     });
 
     // --- 5. Navigation & Sticky Header ---

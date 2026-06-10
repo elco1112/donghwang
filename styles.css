@@ -235,7 +235,8 @@ p {
 
 .header-container {
     height: 100%;
-    max-width: 1500px; /* Increased to make English menu spacious */
+    max-width: 1750px; /* Increased from 1500px to make English menu spacious */
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -247,6 +248,7 @@ p {
     display: flex;
     align-items: center;
     gap: 12px;
+    white-space: nowrap;
 }
 
 .logo-img {
@@ -255,6 +257,7 @@ p {
     object-fit: contain;
     mix-blend-mode: screen;
     filter: brightness(1.15);
+    flex-shrink: 0;
 }
 
 .logo-text-wrap {
@@ -280,6 +283,7 @@ p {
     color: var(--color-primary);
     letter-spacing: 0.05em;
     line-height: 1.1;
+    white-space: nowrap;
 }
 
 .logo-subtext {
@@ -289,6 +293,7 @@ p {
     letter-spacing: 0.12em;
     color: var(--color-accent-dark);
     margin-top: 2px;
+    white-space: nowrap;
 }
 
 .nav-menu ul {
@@ -302,6 +307,7 @@ p {
     color: var(--color-text-light);
     position: relative;
     padding: 6px 0;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -340,39 +346,163 @@ p {
     transform: translateY(-1px);
 }
 
+.nav-brand-link {
+    border-left: 1px solid rgba(197, 160, 89, 0.3);
+    padding-left: 16px !important;
+    color: var(--color-primary-dark) !important;
+    font-weight: 700 !important;
+}
+
+.nav-brand-link:hover {
+    color: var(--color-accent-dark) !important;
+}
+
+.nav-brand-link::after {
+    left: 16px !important;
+}
+
+.nav-brand-link:hover::after {
+    width: calc(100% - 16px) !important;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-/* Language selector */
-.lang-selector {
-    display: flex;
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    border-radius: 30px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.5);
+/* Language Dropdown Switcher */
+.lang-dropdown-wrap {
+    position: relative;
+    display: inline-block;
 }
 
-.lang-btn {
+.lang-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background: none;
-    border: none;
-    padding: 6px 12px;
-    font-size: 1rem; /* 16px */
-    font-weight: 500;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    border-radius: 30px;
+    padding: 8px 16px;
     color: var(--color-text-light);
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.lang-btn:hover {
+.lang-dropdown-trigger:hover {
+    background-color: rgba(128, 10, 29, 0.05);
+    border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
-.lang-btn.active {
-    background-color: var(--color-accent);
+.lang-dropdown-trigger .chevron-icon {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.lang-dropdown-wrap.open .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 170px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    padding: 20px 16px 12px;
+    z-index: 1100;
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.lang-dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.close-dropdown-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #800A1D; /* Primary Red Ginseng Crimson */
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-white);
+    border: none;
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-dropdown-btn:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.1);
+}
+
+.lang-dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lang-dropdown-menu li {
+    width: 100%;
+}
+
+.lang-select-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.lang-select-btn:hover {
+    background-color: var(--color-bg-alt);
+    color: var(--color-primary);
+}
+
+.lang-select-btn .check-icon {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.lang-select-btn.active {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+.lang-select-btn.active .check-icon {
+    opacity: 1;
 }
 
 .mobile-menu-toggle {
@@ -382,6 +512,45 @@ p {
     font-size: 1.25rem; /* 20px */
     cursor: pointer;
     color: var(--color-primary);
+}
+
+/* Intermediate screen responsive styles for header */
+@media (min-width: 769px) and (max-width: 1440px) {
+    .header-container {
+        max-width: 96%;
+        padding: 0 16px;
+    }
+    .nav-menu ul {
+        gap: 16px;
+    }
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+    .logo-text-ko {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header-container {
+        max-width: 98%;
+        padding: 0 10px;
+    }
+    .nav-menu ul {
+        gap: 8px;
+    }
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+    .logo-text-ko {
+        font-size: 1.1rem;
+    }
+    .logo-subtext {
+        font-size: 0.5rem;
+    }
+    .header-actions {
+        gap: 10px;
+    }
 }
 
 /* Hero Section */
@@ -1822,6 +1991,16 @@ p {
     }
 
     .header .logo-text-wrap {
+        display: none;
+    }
+
+    .lang-dropdown-trigger {
+        padding: 8px;
+        border-radius: 50%;
+    }
+
+    .lang-dropdown-trigger .lang-trigger-text,
+    .lang-dropdown-trigger .chevron-icon {
         display: none;
     }
 
